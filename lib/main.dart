@@ -14,55 +14,146 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         body:SafeArea( child: Container(
-          color: Colors.black54,
           alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+
+            child: Column(
             children: [
-              Row(
-                children: [
-                  Container(
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.only(topRight: Radius.zero,topLeft: Radius.circular(20),bottomLeft:Radius.zero,bottomRight: Radius.circular(32)),
-          ),
-                    padding: EdgeInsets.all(10),
-                    margin: EdgeInsets.only(left: 10,right: 10),
+
+              Expanded( child: Row(
+                  children: [
+                    Expanded(
                     child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.green,
-                        borderRadius: BorderRadius.all(Radius.circular(7)),
-                      ),
-
-                      padding: EdgeInsets.all(10),
-                      margin: EdgeInsets.only(left: 10,right: 10),
-                      width: 240,
-                      height: 240,
-
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.only(topRight: Radius.circular(4),topLeft: Radius.zero,bottomLeft:Radius.zero,bottomRight: Radius.circular(4)),
-                        ),
-                        padding: EdgeInsets.all(10),
-                        margin: EdgeInsets.only(left: 10,right: 10),
-                        width: 100,
-                        height: 100,
-                        ),
+                      color: Colors.red,
                     ),
-                  ),
-
-
-
-  ]
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ]
+              ),
               ),
 
-
+              Expanded(child:Row(
+                children: [
+                  Expanded(
+                    flex:2 ,
+                    child: Container(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Expanded(
+                    flex:6 ,
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                  ),
+                  Expanded(
+                    flex:2 ,
+                    child: Container(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+              ),
+              Expanded(child:Row(
+                children: [
+                  Expanded(
+                    flex:3 ,
+                    child: Container(
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Expanded(
+                      flex:4,
+                    child: Container(
+                    ),
+                  ),
+                  Expanded(
+                    flex:3 ,
+                    child: Container(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              ),
+              ),
+              Expanded(child:Row(
+                children: [
+                  Expanded(
+                    flex:1,
+                    child: Container(
+                    ),
+                  ),
+                  Expanded(
+                    flex:2,
+                    child: Container(
+                      color: Colors.green,
+                    ),
+                  ),
+                  Expanded(
+                    flex:1,
+                    child: Container(
+                    ),
+                  ),
+                ],
+              ),
+              ),
+              Expanded(child:Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      color: Colors.yellow,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                    ),
+                  ),
+                ],
+              ),
+              ),
+              Expanded(child:Row(
+                children: [
+                  Expanded(
+                    flex:3,
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                  ),
+                  Expanded(
+                    flex:4,
+                   child: Column(children: [
+                     Expanded(
+                       child:Container(
+                      color: Colors.blue,
+                    ),
+                     ),
+                     Expanded(
+                       child:Container(
+                         color: Colors.green,
+                       ),
+                     ),
+                  ],
+                  ),
+                  ),
+                  Expanded(
+                    flex:3,
+                    child: Container(
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+              ),
             ],
-          ),
+      ),
+      ),
         ),
-      ),
-      ),
-    );
+        ),
+      );
+
   }
 }
