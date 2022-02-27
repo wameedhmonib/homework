@@ -13,147 +13,43 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body:SafeArea( child: Container(
-          alignment: Alignment.center,
-
-            child: Column(
+        body:SafeArea(
+          child: Column(
             children: [
-
-              Expanded( child: Row(
+              Expanded( child: Stack(
                   children: [
-                    Expanded(
-                    child: Container(
-                      color: Colors.red,
+
+                    Container(
+                      child: Image.asset('assets/images/Car.jpg'),
                     ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        color: Colors.blue,
+                    Container(
+                      child: const Text('Car',style:TextStyle(
+                        color: Colors.white,
+                        fontSize: 20
+                      ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
-                  ]
-              ),
-              ),
 
-              Expanded(child:Row(
-                children: [
-                  Expanded(
-                    flex:2 ,
-                    child: Container(
-                      color: Colors.blue,
+                    Container(child: Padding(
+                      padding: const EdgeInsets.all(60),
+                      child: const Text('New Car',style:TextStyle(
+                          color: Colors.white,
+                          fontSize: 20
+                      ),
+                        textAlign: TextAlign.end,
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    flex:6 ,
-                    child: Container(
-                      color: Colors.red,
                     ),
-                  ),
-                  Expanded(
-                    flex:2 ,
-                    child: Container(
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-              ),
-              Expanded(child:Row(
-                children: [
-                  Expanded(
-                    flex:3 ,
-                    child: Container(
-                      color: Colors.blue,
-                    ),
-                  ),
-                  Expanded(
-                      flex:4,
-                    child: Container(
-                    ),
-                  ),
-                  Expanded(
-                    flex:3 ,
-                    child: Container(
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-              ),
-              Expanded(child:Row(
-                children: [
-                  Expanded(
-                    flex:1,
-                    child: Container(
-                    ),
-                  ),
-                  Expanded(
-                    flex:2,
-                    child: Container(
-                      color: Colors.green,
-                    ),
-                  ),
-                  Expanded(
-                    flex:1,
-                    child: Container(
-                    ),
-                  ),
-                ],
-              ),
-              ),
-              Expanded(child:Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.yellow,
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                    ),
-                  ),
-                ],
-              ),
-              ),
-              Expanded(child:Row(
-                children: [
-                  Expanded(
-                    flex:3,
-                    child: Container(
-                      color: Colors.red,
-                    ),
-                  ),
-                  Expanded(
-                    flex:4,
-                   child: Column(children: [
-                     Expanded(
-                       child:Container(
-                      color: Colors.blue,
-                    ),
-                     ),
-                     Expanded(
-                       child:Container(
-                         color: Colors.green,
-                       ),
-                     ),
                   ],
-                  ),
-                  ),
-                  Expanded(
-                    flex:3,
-                    child: Container(
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
               ),
               ),
             ],
       ),
       ),
         ),
-        ),
-      );
+        );
+
 
   }
 }
